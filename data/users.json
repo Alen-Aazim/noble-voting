@@ -1,22 +1,53 @@
+
 [
-  {
-    "username": "user",
-    "password": "pass",
-    "role": "user"
-  },
   {
     "username": "admin",
     "password": "admin",
     "role": "admin"
   },
   {
-    "username": "Farzeen",
-    "password": "Farzeen",
+    "username": "aazim",
+    "password": "aazim",
+    "role": "admin"
+  },
+  {
+    "username": "user2",
+    "password": "user2",
     "role": "user"
   },
   {
-    "username": "aazim",
-    "password": "aazim",
+    "username": "user3",
+    "password": "user3",
+    "role": "user"
+  },
+  {
+    "username": "user4",
+    "password": "user4",
+    "role": "user"
+  },
+  {
+    "username": "user5",
+    "password": "user5",
+    "role": "user"
+  },
+  {
+    "username": "user6",
+    "password": "user6",
+    "role": "user"
+  },
+  {
+    "username": "user7",
+    "password": "user7",
+    "role": "user"
+  },
+  {
+    "username": "user8",
+    "password": "user8",
+    "role": "user"
+  },
+  {
+    "username": "user9",
+    "password": "user9",
     "role": "user"
   }
 ]

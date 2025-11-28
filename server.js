@@ -139,6 +139,30 @@ app.post('/api/reset-votes', (req, res) => {
   res.json({ success: true });
 });
 
+// User Management Endpoints
+app.get('/api/users', (req, res) => {
+  res.json(readJSON('users.json'));
+});
+
+app.post('/api/users', (req, res) => {
+  const { username, password, role } = req.body;
+  const users = readJSON('users.json');
+  
+  if (users.find(u => u.username === username)) {
+    return res.json({ success: false, message: 'Username already exists' });
+  }
+  
+  users.push({ username, password, role: role || 'user' });
+  writeJSON('users.json', users);
+  res.json({ success: true });
+});
+
+app.delete('/api/users/:username', (req, res) => {
+  const users = readJSON('users.json').filter(u => u.username !== req.params.username);
+  writeJSON('users.json', users);
+  res.json({ success: true });
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
